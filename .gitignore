@@ -4,3 +4,4 @@ transpiled
 /.idea/
 wrangler.toml
 .cargo-ok
+.env

@@ -9,7 +9,8 @@
     "build": "node build.js",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "test": "jest --config jestconfig.json --verbose"
+    "test": "jest --config jestconfig.json --verbose",
+    "prisma:migrate": "prisma migrate dev"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^3.0.0",
@@ -21,7 +22,11 @@
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "prettier": "^2.3.0",
+    "prisma": "3.6.0",
     "service-worker-mock": "^2.0.5",
     "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "@prisma/client": "3.6.0"
   }
 }
