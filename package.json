@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Cloudflare worker TypeScript template",
   "main": "dist/worker.js",
-	"private": true,
+  "private": true,
   "scripts": {
     "dev": "wrangler dev",
     "build": "node build.js",
