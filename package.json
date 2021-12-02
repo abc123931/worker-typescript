@@ -5,8 +5,8 @@
   "main": "dist/worker.js",
   "private": true,
   "scripts": {
-    "dev": "miniflare ./dist/worker.js",
-    "build": "yarn prisma:generate && node build.js",
+    "dev": "miniflare ./dist/worker.js --watch",
+    "build": "node build.js",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose",
