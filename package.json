@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "miniflare ./dist/worker.js",
-    "build": "node build.js",
+    "build": "yarn prisma:generate && node build.js",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
     "test": "jest --config jestconfig.json --verbose",
@@ -20,16 +20,13 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "esbuild": "^0.14.1",
-    "esbuild-plugin-alias": "^0.2.1",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "miniflare": "^1.4.1",
     "prettier": "^2.3.0",
     "prisma": "3.6.0",
     "service-worker-mock": "^2.0.5",
-    "ts-loader": "8.3.0",
     "typescript": "^4.3.2",
-    "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1"
   },
   "dependencies": {
